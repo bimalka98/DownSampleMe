@@ -44,8 +44,11 @@ int main(){
         int new_pixel = (a + b + c)/4;
         image[x*image_width + y] = new_pixel;
         printf("%i, ", new_pixel);
-        height_count -= 1;
+
+        
         x += 1; // moving to next row
+        height_count -= 1;
+
         printf("\n");
     }
 
@@ -77,29 +80,31 @@ int main(){
         image[x*image_width + y] = new_pixel;
         printf("%i, ", new_pixel);
 
-        width_count -= 1;
         y += 1; // moving to next column
+        width_count -= 1;        
         printf("\n");
     }
     
     // downsampling
     printf("\nDownsampling\n");
-    height_count = dsimage_height;
+    height_count = image_height/2;// dsimage_height;
     x = 0;
     while (height_count > 0){
         int y = 0;
-        int width_count = dsimage_width;
+        int width_count = image_width/2; // dsimage_width;
         while (width_count > 0){
 
-            int pixel_value = image[2*y*image_width + 2*x];
-            downsampledimage[x* dsimage_width + y] = pixel_value;
+            int pixel_value = image[2 * (y*image_width + x)];
+            downsampledimage[x* (image_width/2) + y] = pixel_value;
             
             printf("%i, ", pixel_value);
             y += 1; // moving to next pixel
             width_count -= 1;            
         }
-        height_count -= 1;
+        
         x += 1; // moving to next  row 
+        height_count -= 1;
+
         printf("\n");
     }
 }

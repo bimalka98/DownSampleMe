@@ -1,0 +1,3 @@
+/mnt/e/DownSampleMe/Algorithm Verification/build/CMakeFiles/rebuild_cache.dir
+/mnt/e/DownSampleMe/Algorithm Verification/build/CMakeFiles/edit_cache.dir
+/mnt/e/DownSampleMe/Algorithm Verification/build/CMakeFiles/downsampler.dir

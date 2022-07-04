@@ -14,6 +14,14 @@
 !*.md
 !*.svg
 !*.PNG
+!*.jpg
+!*.jpeg
+
+# python and their o/p
+!*.ipynb
+!*.py
+!*.txt
+
 ###########################################################################
 ##	VIVADO
 #Source files:

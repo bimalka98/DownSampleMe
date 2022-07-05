@@ -131,73 +131,73 @@ module Processor(
         .B(input [27:0] B),
         .out(output reg [27:0] out),
         .z_flag(z_flag),
-        .sel(input [3:0] sel)
+        .sel(control_signals[3:0])
     );
 
     Register R1(
         .clk(clk),
-        .w_en(control_signals[]),
+        .w_en(control_signals[18]),
         .data_in(C_bus),
         .data_out(R1_bus)
     );
 
     Register R2(
         .clk(clk),
-        .w_en(control_signals[]),
+        .w_en(control_signals[17]),
         .data_in(C_bus),
         .data_out(R2_bus)
     );
 
     Register R3(
         .clk(clk),
-        .w_en(control_signals[]),
+        .w_en(control_signals[16]),
         .data_in(C_bus),
         .data_out(R3_bus)
     );
 
     Register R4(
         .clk(clk),
-        .w_en(control_signals[]),
+        .w_en(control_signals[15]),
         .data_in(C_bus),
         .data_out(R4_bus)
     );
 
     Register R5(
         .clk(clk),
-        .w_en(control_signals[]),
+        .w_en(control_signals[14]),
         .data_in(C_bus),
         .data_out(R5_bus)
     );
 
     Register R6(
         .clk(clk),
-        .w_en(control_signals[]),
+        .w_en(control_signals[13]),
         .data_in(C_bus),
         .data_out(R6_bus)
     );
 
     Register R7(
         .clk(clk),
-        .w_en(control_signals[]),
+        .w_en(control_signals[12]),
         .data_in(C_bus),
         .data_out(R7_bus)
     );
 
     Register R8(
         .clk(clk),
-        .w_en(control_signals[]),
+        .w_en(control_signals[11]),
         .data_in(C_bus),
         .data_out(R8_bus)
     );
 
     Register R9(
         .clk(clk),
-        .w_en(control_signals[]),
+        .w_en(control_signals[10]),
         .data_in(C_bus),
         .data_out(R9_bus)
     );
 
-        ProgamCounter PC(
+    ProgamCounter PC(
         .clk(clk),
         .en(en),
         .w_en(control_signals[20]),
@@ -209,8 +209,7 @@ module Processor(
 
     B_Bus_Mux MUX(
         .clk(clk),
-        .sel();
-    //input [3:0] sel,
+        .sel(control_signals[3:0]);
     //input [27:0] AC, meka dnne naneh?
         .MAR(mar_out),
         .MDR(mdr_out),
@@ -227,7 +226,6 @@ module Processor(
         .R8(R8_bus),
         .R9(R9_bus),
         .Bus_Out(B_bus)
-    //output reg [27:0] Bus_Out
     );
 
 endmodule

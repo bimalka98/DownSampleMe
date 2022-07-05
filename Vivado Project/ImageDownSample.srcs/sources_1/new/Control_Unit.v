@@ -38,9 +38,16 @@ module Control_Unit(
     
     //instructions which jumps
     parameter  FETCH2=8'd1;
-    //parameter  JMPZ1=8'd1;
-    //parameter  JMPNZ1=8'd1;
-    parameter  NOP=8'd3;
+    
+    parameter  JUMPZ1=8'd73;
+    parameter  JMPZN1=8'd74;
+    parameter  JMPZY1=8'd75;
+
+    parameter  JMPNZ1=8'd77;
+    parameter  JMPNZY1=8'd78;
+    parameter  JMPNZN1=8'd79;
+
+    parameter  NOOP=8'd3;
     
     assign complete = finish;
     
@@ -57,31 +64,32 @@ module Control_Unit(
                 begin
                     control_signals={MBRU,control_store[FETCH2][27:0]};                    
                 end
-            //JMPZ1: 
-            // begin 
-            //    if (z_flag==0)
-            //       control_signals={######,control_store[JMPZ1][27:0]};
-            //       else
-            //         control_signals={8'd8,control_store[JMPZ1][27:0]};
-            // end         
-            //JMPNZ1:
-            // begin 
-            //    if (z_flag==0)
-            //       control_signals={######,control_store[JMPNZ1][27:0]};
-            //       else
-            //         control_signals={8'd11,control_store[JMPNZ1][27:0]};
-            // end 
-            NOP: finish = 1'b1;   //idling 
-            default: control_signals=control_store[instr_address];
+            JUMPZ1: 
+                begin 
+                    if (z_flag==1'b0)
+                        control_signals={JMPZN1,control_store[JUMPZ1][27:0]};
+                    else
+                        control_signals={JMPZY1,control_store[JUMPZ1][27:0]};
+                 end         
+            JMPNZ1:
+                begin 
+                    if (z_flag==1'b1)
+                        control_signals={JMPNZY1,control_store[JMPNZ1][27:0]};
+                    else
+                        control_signals={JMPNZN1,control_store[JMPNZ1][27:0]};
+                end 
+                
+             NOOP: finish = 1'b1;   //idling 
+            
+             default: control_signals=control_store[instr_address];
             endcase
          end
             
     initial 
     begin
     
-    
         control_store[0]  = 36'b00000001_0_0000_00010000000000_100_00_0000; //	FETCH1
-        control_store[1]  = 36'xxxxxxxxx_0_0000_00000000000000_000_10_0000; //	FETCH2
+        control_store[1]  = 36'bxxxxxxxx_0_0000_00000000000000_000_10_0000; //	FETCH2
         control_store[3]  = 36'b00000000_0_0000_00000000000000_000_00_0000; //	NOOP
         control_store[4]  = 36'b00000000_0_0110_00000000000001_000_00_0000; //	CLAC
         control_store[5]  = 36'b00000110_0_1000_10000000000000_010_00_0000; //	LDAC 1
@@ -152,15 +160,14 @@ module Control_Unit(
         control_store[70] = 36'b00000000_0_0101_00000000000001_000_00_0000; //	DECREMENTAC
         control_store[71] = 36'b01001000_0_0111_00000000000001_000_00_0011; //	JUMP1
         control_store[72] = 36'b00000000_1_1000_00100000000000_000_00_0000; //	JUMP2
-        control_store[73] = 36'xxxxxxxxx_1_0000_00000000000000_000_00_0000; //	JUMPZ1
+        control_store[73] = 36'bxxxxxxxx_1_0000_00000000000000_000_00_0000; //	JUMPZ1
         control_store[74] = 36'b00000000_0_0000_00000000000000_000_00_0000; //	JMPZN1 (Z = 0)
         control_store[75] = 36'b01001100_0_0111_00000000000001_000_00_0011; //	JMPZY1 (Z = 1)
         control_store[76] = 36'b00000000_1_1000_00100000000000_000_00_0000; //	JMPZY2 (Z = 1)
-        control_store[77] = 36'xxxxxxxxx_1_0000_00000000000000_000_00_0000; //	JMPNZ1
+        control_store[77] = 36'bxxxxxxxx_1_0000_00000000000000_000_00_0000; //	JMPNZ1
         control_store[78] = 36'b00000000_0_0000_00000000000000_000_00_0000; //	JMPNZY1 (Z = 1)
         control_store[79] = 36'b01010000_0_0111_00000000000001_000_00_0011; //	JMPNZN1 (Z = 0)
         control_store[80] = 36'b00000000_1_1000_00100000000000_000_00_0000; //	JMPNZN2 (Z = 0)    
-    
     
     end
     

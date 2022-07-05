@@ -228,4 +228,13 @@ module Processor(
         .Bus_Out(B_bus)
     );
 
+    Ram RAM(
+        .clk(clk),
+        .w_en(control_signals[]),
+        .r_en(),
+        input [17:0] address,
+        input [7:0] data_in,         //maximum value is 256 (8 bits)
+        output reg [7:0] data_out
+    );
+
 endmodule

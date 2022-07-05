@@ -23,7 +23,10 @@
 module Processor(
     input en,
     input clk,
-    output [17:0] data_addr; 
+    input [7:0] DRam_in,
+    output [17:0] data_addr,
+    output [7:0]  DRam_out
+    
     );
 
     // used in Instruction_Ram
@@ -36,26 +39,27 @@ module Processor(
     wire [35:0] control_signals;
     
     // used in MBRU
-    wire [27:0] data_out;
+    wire [27:0] mbru_out;
 
     // used in MAR
+    wire [27:0] mar_out;
     wire [27:0] B_bus;
     wire [27:0] C_bus;
     
+    // used in Accumulator
+    wire [27:0] A_bus;
+
+    // used in mdr
+    wire [27:0] mdr_out;    
 
     output wire [7:0] instruction_out;
        
-    
-    output wire [7:0] DRam_out; 
 
     wire fetch,w_en,write_en,read_en,inc;
     wire [7:0] instr_address;
     
     
-    wire [27:0] data_in,MBRU_out;
-    
-    
-    wire [7:0] DRam_in;  
+    wire [27:0] data_in;
 
     // INSTRUCTION RAM
     Instruction_Ram IRAM(
@@ -82,24 +86,24 @@ module Processor(
         .fetch(control_signals[8]),
         .instruction_in(instruction_out_memory),
         .instruction_out(instruction_out_MBRU),
-        .data_out(data_out)
+        .data_out(mbru_out)
     );
 
     MAR MAR(
         .clk(clk),
         .w_en(control_signals[22]),
-        .data_out(B_bus),
+        .data_out(mar_out),
         .data_in(C_bus),
         .data_addr(data_addr)
     );
 
     MDR MDR(
         .clk(clk),
-        .w_en(w_en),
-        .write_en(write_en),
-        .read_en(read_en),
-        .data_out(data_out),
-        .data_in(data_in),
+        .w_en(control_signals[21]),
+        .write_en(control_signals[6]),
+        .read_en(control_signals[7]),
+        .data_out(mdr_out),
+        .data_in(C_bus),
         .DRam_in(DRam_in),
         .DRam_out(DRam_out)
     );
@@ -108,8 +112,8 @@ module Processor(
         .clk(clk),
         .data_in(C_bus),
         .data_out(A_bus),
-        .inc(inc),
-        .w_en(w_en)
+        .inc(control_signals[4]),
+        .w_en(control_signals[9])
     );
 
     ALU ALU(

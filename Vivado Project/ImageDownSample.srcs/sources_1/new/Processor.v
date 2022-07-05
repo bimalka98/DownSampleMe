@@ -39,8 +39,8 @@ module Processor(
     wire [27:0] data_out;
 
     // used in MAR
-    wire [27:0] mar_out;
-    wire [27:0] mar_in;
+    wire [27:0] B_bus;
+    wire [27:0] C_bus;
     
 
     output wire [7:0] instruction_out;
@@ -58,13 +58,6 @@ module Processor(
     wire [7:0] DRam_in;  
 
     // INSTRUCTION RAM
-
-    module Instruction_Ram(
-    input clk,
-    input [7:0] address,
-    output reg [25:0] instr_out
-    );
-
     Instruction_Ram IRAM(
         .clk(clk),      // input clk
         .address(instruction_address)           // to be initialized [7:0] address
@@ -94,9 +87,9 @@ module Processor(
 
     MAR MAR(
         .clk(clk),
-        .w_en(w_en),
-        .data_out(mar_out),
-        .data_in(data_in),
+        .w_en(control_signals[22]),
+        .data_out(B_bus),
+        .data_in(C_bus),
         .data_addr(data_addr)
     );
 
@@ -113,8 +106,8 @@ module Processor(
 
     Accumilator ACC(
         .clk(clk),
-        .data_in(data_in),
-        .data_out(data_out),
+        .data_in(C_bus),
+        .data_out(A_bus),
         .inc(inc),
         .w_en(w_en)
     );
@@ -126,10 +119,10 @@ module Processor(
     ProgamCounter PC(
         .clk(clk),
         .en(en),
-        .w_en(w_en),
+        .w_en(control_signals[20]),
         .complete(complete),
-        .inc(inc),
-        .data_in(data_in),
+        .inc(control_signals[5]),
+        .data_in(C_bus),
         .instruction_address(instruction_address)
     );
 

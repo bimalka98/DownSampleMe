@@ -32,14 +32,15 @@ module MDR(
     );
     
     always @(posedge clk)
-        begin
-            if (w_en==1)
-                data_out<=data_in;
-             else if (read_en)
-                data_out<= {20'b0000000000,DRam_in};
-             else if (write_en)
-                DRam_out<=data_in[7:0];
-         end
+    
+    begin
+        if (w_en==1)
+            data_out<=data_in;
+            else if (read_en)
+            data_out<= {20'b0000000000,DRam_in};
+            else if (write_en)
+            DRam_out<=data_in[7:0];
+        end
                 
     
 endmodule

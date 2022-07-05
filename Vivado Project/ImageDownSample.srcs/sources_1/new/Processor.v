@@ -46,6 +46,15 @@ module Processor(
     wire [27:0] B_bus;
     wire [27:0] C_bus;
     
+    wire [27:0] R1_bus;
+    wire [27:0] R2_bus;
+    wire [27:0] R3_bus;
+    wire [27:0] R4_bus;
+    wire [27:0] R5_bus;
+    wire [27:0] R6_bus;
+    wire [27:0] R7_bus;
+    wire [27:0] R8_bus;
+    wire [27:0] R9_bus;
     // used in Accumulator
     wire [27:0] A_bus;
 
@@ -118,9 +127,77 @@ module Processor(
 
     ALU ALU(
         .clk(clk),
+        .A(input [27:0] A),
+        .B(input [27:0] B),
+        .out(output reg [27:0] out),
+        .z_flag(z_flag),
+        .sel(input [3:0] sel)
     );
 
-    ProgamCounter PC(
+    Register R1(
+        .clk(clk),
+        .w_en(control_signals[]),
+        .data_in(C_bus),
+        .data_out(R1_bus)
+    );
+
+    Register R2(
+        .clk(clk),
+        .w_en(control_signals[]),
+        .data_in(C_bus),
+        .data_out(R2_bus)
+    );
+
+    Register R3(
+        .clk(clk),
+        .w_en(control_signals[]),
+        .data_in(C_bus),
+        .data_out(R3_bus)
+    );
+
+    Register R4(
+        .clk(clk),
+        .w_en(control_signals[]),
+        .data_in(C_bus),
+        .data_out(R4_bus)
+    );
+
+    Register R5(
+        .clk(clk),
+        .w_en(control_signals[]),
+        .data_in(C_bus),
+        .data_out(R5_bus)
+    );
+
+    Register R6(
+        .clk(clk),
+        .w_en(control_signals[]),
+        .data_in(C_bus),
+        .data_out(R6_bus)
+    );
+
+    Register R7(
+        .clk(clk),
+        .w_en(control_signals[]),
+        .data_in(C_bus),
+        .data_out(R7_bus)
+    );
+
+    Register R8(
+        .clk(clk),
+        .w_en(control_signals[]),
+        .data_in(C_bus),
+        .data_out(R8_bus)
+    );
+
+    Register R9(
+        .clk(clk),
+        .w_en(control_signals[]),
+        .data_in(C_bus),
+        .data_out(R9_bus)
+    );
+
+        ProgamCounter PC(
         .clk(clk),
         .en(en),
         .w_en(control_signals[20]),
@@ -128,6 +205,29 @@ module Processor(
         .inc(control_signals[5]),
         .data_in(C_bus),
         .instruction_address(instruction_address)
+    );
+
+    B_Bus_Mux MUX(
+        .clk(clk),
+        .sel();
+    //input [3:0] sel,
+    //input [27:0] AC, meka dnne naneh?
+        .MAR(mar_out),
+        .MDR(mdr_out),
+        .PC(instruction_address),
+    //input [8:0] PC,??[7:0??]
+        .MBRU(mbru_out),
+        .R1(R1_bus),
+        .R2(R2_bus),
+        .R3(R3_bus),
+        .R4(R4_bus),
+        .R5(R5_bus),
+        .R6(R6_bus),
+        .R7(R7_bus),
+        .R8(R8_bus),
+        .R9(R9_bus),
+        .Bus_Out(B_bus)
+    //output reg [27:0] Bus_Out
     );
 
 endmodule

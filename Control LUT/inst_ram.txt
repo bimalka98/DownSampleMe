@@ -1,0 +1,983 @@
+CLAC
+LD X1,R1
+
+
+
+
+
+
+LD X2,R2
+
+
+
+
+
+
+LD X3,R3
+
+
+
+
+
+
+SW X5,R3
+
+
+
+
+
+
+CLAC
+
+
+
+
+
+
+MOV AC,R4
+
+
+
+
+
+
+MOV AC,R5
+
+
+
+
+
+
+MOV AC,R6
+
+
+
+
+
+
+MOV R4AC
+
+
+
+
+LSHIFT8
+
+
+
+
+ADD R5
+
+
+
+
+ADD R1
+
+
+
+
+LDAC
+
+
+
+
+LSHIFT1
+
+
+
+
+MOV AC,R7
+
+
+
+
+
+
+MOV R2,AC
+
+
+
+
+DECREMENT AC
+
+
+
+
+SW X12,AC
+
+
+
+
+
+
+MOV R4,AC
+
+
+
+
+LSHIFT8
+
+
+
+
+ADD R5
+
+
+
+
+INCREMENT AC
+
+
+
+
+ADD R1
+
+
+
+
+LDAC
+
+
+
+
+MOV AC,R8
+
+
+
+
+
+
+ADD R7
+
+
+
+
+ADD R6
+
+
+
+
+RSHIFT1 
+
+
+
+
+RSHIFT1
+
+
+
+
+MOV AC,R9
+
+
+
+
+
+
+MOV R4,AC
+
+
+
+
+LSHIFT8
+
+
+
+
+ADD R5
+
+
+
+
+ADD R1
+
+
+
+
+MOV AC,MAR
+
+
+
+
+MOV R9,AC
+
+
+
+
+MOV AC,MDR
+
+
+
+
+
+
+MOV R7,AC
+
+
+
+
+RSHIFT1
+
+
+
+
+MOV AC,R6
+
+
+
+
+
+
+MOV R8,AC
+
+
+
+
+LSHIFT1
+
+
+
+
+MOV AC,R7
+
+
+
+
+
+
+MOV R5,AC
+
+
+
+
+INCREMENT AC
+
+
+
+
+MOV AC,R5
+
+
+
+
+
+
+LD X12,R9
+
+
+
+
+MOV R9,AC
+
+
+
+
+DECREMENT AC
+
+
+
+
+STAC
+
+
+
+
+
+
+JMPNZ 20
+
+
+
+
+
+
+CLAC
+
+
+
+
+ADD R7
+
+
+
+
+ADD R6
+
+
+
+
+RSHIFT1 
+
+
+
+
+RSHIFT1
+
+
+
+
+MOV AC,R9
+
+
+
+
+
+
+MOV R4,AC
+
+
+
+
+LSHIFT8
+
+
+
+
+ADD R5
+
+
+
+
+ADD R1
+
+
+
+
+MOV AC,MAR
+
+
+
+
+MOV R9,AC
+
+
+
+
+MOV AC,MDR
+
+
+
+
+
+
+MOV R4,AC
+
+
+
+
+INCREMENT AC
+
+
+
+
+MOV AC,R4
+
+
+
+
+
+
+LD X5,R9
+
+
+
+
+MOV R9,AC
+
+
+
+
+DECREMENT AC
+
+
+
+
+STAC
+
+
+
+
+
+
+JMPNZ 8
+
+
+VERTICAL CONVOLUTION
+
+
+
+
+SW X12,R2
+
+
+
+
+
+
+CLAC
+
+
+
+
+MOV AC,R5
+
+
+
+
+
+
+MOV AC,R4
+
+
+
+
+
+
+MOV AC,R6
+
+
+
+
+
+
+MOV R4,AC
+
+
+
+
+LSHIFT8
+
+
+
+
+ADD R5
+
+
+
+
+ADD R1
+
+
+
+
+LDAC
+
+
+
+
+LSHIFT1
+
+
+
+
+MOV AC,R7
+
+
+
+
+
+
+MOV R3,AC
+
+
+
+
+DECREMENT AC
+
+
+
+
+SW X5,AC
+
+
+
+
+
+
+MOV R4,AC
+
+
+
+
+LSHIFT8
+
+
+
+
+ADD R5
+
+
+
+
+ADD R2
+
+
+
+
+ADD R1
+
+
+
+
+LDAC
+
+
+
+
+MOV AC,R8
+
+
+
+
+
+
+ADD R7
+
+
+
+
+ADD R6
+
+
+
+
+RSHIFT1 
+
+
+
+
+RSHIFT1
+
+
+
+
+MOV AC,R9
+
+
+
+
+
+
+MOV R7,AC
+
+
+
+
+RSHIFT1
+
+
+
+
+MOV AC,R6
+
+
+
+
+
+
+MOV R8,AC
+
+
+
+
+LSHIFT1
+
+
+
+
+MOV AC,R7
+
+
+
+
+
+
+MOV R4,AC
+
+
+
+
+INCREMENT AC
+
+
+
+
+MOV AC,R4
+
+
+
+
+
+
+LD X5,R9
+
+
+
+
+MOV R9,AC
+
+
+
+
+DECREMENT AC
+
+
+
+
+STAC
+
+
+
+
+
+
+JMPNZ 89
+
+
+
+
+
+
+CLAC
+
+
+
+
+ADD R7
+
+
+
+
+ADD R6
+
+
+
+
+RSHIFT1 
+
+
+
+
+RSHIFT1
+
+
+
+
+MOV AC,R9
+
+
+
+
+
+
+MOV R4,AC
+
+
+
+
+LSHIFT8
+
+
+
+
+ADD R5
+
+
+
+
+ADD R1
+
+
+
+
+MOV AC,MAR
+
+
+
+
+MOV R9,AC
+
+
+
+
+MOV AC,MDR
+
+
+
+
+
+
+MOV R5,AC
+
+
+
+
+INCREMENT AC
+
+
+
+
+MOV AC,R5
+
+
+
+
+
+
+LD X12,R9
+
+
+
+
+MOV R9,AC
+
+
+
+
+DECREMENT AC
+
+
+
+
+STAC
+
+
+
+
+
+
+JMPNZ 77
+
+
+DOWNSAMPLING
+
+
+
+
+LD X4,R6
+
+
+
+
+
+
+MOV R3,AC
+
+
+
+
+RSHIFT1
+
+
+
+
+SW X5,AC
+
+
+
+
+
+
+CLAC
+
+
+
+
+MOV AC,R4
+
+
+
+
+
+
+MOV AC,R5
+
+
+
+
+
+
+MOV R2,AC
+
+
+
+
+RSHIFT1
+
+
+
+
+SW X12,AC
+
+
+
+
+
+
+MOV R5,AC
+
+
+
+
+LSHIFT8
+
+
+
+
+ADD R4
+
+
+
+
+LSHIFT1
+
+
+
+
+ADD R1
+
+
+
+
+LDAC
+
+
+
+
+MOV AC,R9
+
+
+
+
+
+
+MOV R4,AC
+
+
+
+
+RSHIFT1
+
+
+
+
+LSHIFT8
+
+
+
+
+ADD R5
+
+
+
+
+ADD R6
+
+
+
+
+MOV AC,MAR
+
+
+
+
+MOV R9,AC
+
+
+
+
+MOV AC,MDR
+
+
+
+
+
+
+MOV R5,AC
+
+
+
+
+INCREMENT AC
+
+
+
+
+MOV AC,R5
+
+
+
+
+
+
+LD X12,R9
+
+
+
+
+MOV R9,AC
+
+
+
+
+DECREMENT AC
+
+
+
+
+STAC
+
+
+
+
+
+
+JMPNZ 146
+
+
+
+
+
+
+MOV R4,AC
+
+
+
+
+INCREMENT AC
+
+
+
+
+MOV AC,R4
+
+
+
+
+
+
+LD X5,R9
+
+
+
+
+MOV R9,AC
+
+
+
+
+DECREMENT AC
+
+
+
+
+STAC
+
+
+
+
+
+
+JMPNZ 142
+
+
+

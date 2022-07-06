@@ -127,11 +127,11 @@ module Processor(
 
     ALU ALU(
         .clk(clk),
-        .A(input [27:0] A),
-        .B(input [27:0] B),
-        .out(output reg [27:0] out),
+        .A(A_bus),
+        .B(B_bus),
+        .out(C_bus),
         .z_flag(z_flag),
-        .sel(control_signals[3:0])
+        .sel(control_signals[26:23])
     );
 
     Register R1(
@@ -204,16 +204,17 @@ module Processor(
         .complete(complete),
         .inc(control_signals[5]),
         .data_in(C_bus),
-        .instruction_address(instruction_address)
+        .instruction_address(instruction_address)  
+        // .PC_out(pc_out)
     );
 
     B_Bus_Mux MUX(
         .clk(clk),
-        .sel(control_signals[3:0]);
-    //input [27:0] AC, meka dnne naneh?
+        .sel(control_signals[3:0]),
+        .AC(A_bus),
         .MAR(mar_out),
         .MDR(mdr_out),
-        .PC(instruction_address),
+        .PC(instruction_address), //.PC(pc_out)
     //input [8:0] PC,??[7:0??]
         .MBRU(mbru_out),
         .R1(R1_bus),

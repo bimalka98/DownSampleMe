@@ -102,7 +102,7 @@ module Instruction_Ram(
         inst_ram[16]    = {MOVACR7, 18'd0};
         inst_ram[17]    = {MOVR2AC, 18'd0};
         inst_ram[18]    = {DECREMENTAC, 18'd0};
-        inst_ram[19]    = {SWX12AC, 18'd7};
+        inst_ram[19]    = {SWXXAC, 18'd7};
         inst_ram[20]    = {MOVR4AC, 18'd0};
         inst_ram[21]    = {LSHIFT8, 18'd0};
         inst_ram[22]    = {ADDR5, 18'd0};
@@ -131,7 +131,7 @@ module Instruction_Ram(
         inst_ram[45]    = {MOVR5AC, 18'd0};
         inst_ram[46]    = {INCREMENTAC, 18'd0};
         inst_ram[47]    = {MOVACR5, 18'd0};
-        inst_ram[48]    = {LDX12R9, 18'd7};
+        inst_ram[48]    = {LDXXR9, 18'd7};
         inst_ram[49]    = {MOVR9AC, 18'd0};
         inst_ram[50]    = {DECREMENTAC, 18'd0};
         inst_ram[51]    = {STAC, 18'd0};
@@ -152,7 +152,7 @@ module Instruction_Ram(
         inst_ram[66]    = {MOVR4AC, 18'd0};
         inst_ram[67]    = {INCREMENTAC, 18'd0};
         inst_ram[68]    = {MOVACR4, 18'd0};
-        inst_ram[69]    = {LDX5R9, 18'd3};
+        inst_ram[69]    = {LDXXR9, 18'd3};
         inst_ram[70]    = {MOVR9AC, 18'd0};
         inst_ram[71]    = {DECREMENTAC, 18'd0};
         inst_ram[72]    = {STAC, 18'd0};
@@ -166,12 +166,12 @@ module Instruction_Ram(
         inst_ram[80]    = {LSHIFT8, 18'd0};
         inst_ram[81]    = {ADDR5, 18'd0};
         inst_ram[82]    = {ADDR1, 18'd0};
-        inst_ram[83]    = {LDAC, 18'd0'};
+        inst_ram[83]    = {LDAC, 18'd0};
         inst_ram[84]    = {LSHIFT1, 18'd0};
         inst_ram[85]    = {MOVACR7, 18'd0};
         inst_ram[86]    = {MOVR3AC, 18'd0};
         inst_ram[87]    = {DECREMENTAC, 18'd0};
-        inst_ram[88]    = {SWX5AC, 18'd3};
+        inst_ram[88]    = {SWXXAC, 18'd3};
         inst_ram[89]    = {MOVR4AC, 18'd0};
         inst_ram[90]    = {LSHIFT8, 18'd0};
         inst_ram[91]    = {ADDR5,   18'd0};
@@ -193,7 +193,7 @@ module Instruction_Ram(
         inst_ram[107]   = {MOVR4AC, 18'd0};
         inst_ram[108]   = {INCREMENTAC, 18'd0};
         inst_ram[109]   = {MOVACR4, 18'd0};
-        inst_ram[110]   = {LDX5R9, 18'd3};
+        inst_ram[110]   = {LDXXR9, 18'd3};
         inst_ram[111]   = {MOVR9AC, 18'd0};
         inst_ram[112]   = {DECREMENTAC, 18'd0};
         inst_ram[113]   = {STAC, 18'd0};
@@ -214,7 +214,7 @@ module Instruction_Ram(
         inst_ram[128]   = {MOVR5AC, 18'd0};
         inst_ram[129]   = {INCREMENTAC, 18'd0};
         inst_ram[130]   = {MOVACR5, 18'd0};
-        inst_ram[131]   = {LDX12R9, 18'd7};
+        inst_ram[131]   = {LDXXR9, 18'd7};
         inst_ram[132]   = {MOVR9AC, 18'd0};
         inst_ram[133]   = {DECREMENTAC, 18'd0};
         inst_ram[134]   = {STAC, 18'd0};
@@ -222,13 +222,13 @@ module Instruction_Ram(
         inst_ram[136]   = {LDX4R6, 18'd9};
         inst_ram[137]   = {MOVR3AC, 18'd0};
         inst_ram[138]   = {RSHIFT1, 18'd0};
-        inst_ram[139]   = {SWX5AC, 18'd3};
+        inst_ram[139]   = {SWXXAC, 18'd3};
         inst_ram[140]   = {CLAC, 18'd0};
         inst_ram[141]   = {MOVACR4, 18'd0};
         inst_ram[142]   = {MOVACR5, 18'd0};
         inst_ram[143]   = {MOVR2AC, 18'd0};
         inst_ram[144]   = {RSHIFT1, 18'd0};
-        inst_ram[145]   = {SWX12AC, 18'd7};
+        inst_ram[145]   = {SWXXAC, 18'd7};
         inst_ram[146]   = {MOVR5AC, 18'd0};
         inst_ram[147]   = {LSHIFT8, 18'd0};
         inst_ram[148]   = {ADDR4, 18'd0};
@@ -247,7 +247,7 @@ module Instruction_Ram(
         inst_ram[161]   = {MOVR5AC, 18'd0};
         inst_ram[162]   = {INCREMENTAC, 18'd0};
         inst_ram[163]   = {MOVACR5, 18'd0};
-        inst_ram[164]   = {LDX12R9, 18'd7};
+        inst_ram[164]   = {LDXXR9, 18'd7};
         inst_ram[165]   = {MOVR9AC, 18'd0};
         inst_ram[166]   = {DECREMENTAC, 18'd0};
         inst_ram[167]   = {STAC, 18'd0};
@@ -255,7 +255,7 @@ module Instruction_Ram(
         inst_ram[169]   = {MOVR4AC, 18'd0};
         inst_ram[170]   = {INCREMENTAC, 18'd0};
         inst_ram[171]   = {MOVACR4, 18'd0};
-        inst_ram[172]   = {LDX5R9, 18'd3};
+        inst_ram[172]   = {LDXXR9, 18'd3};
         inst_ram[173]   = {MOVR9AC, 18'd0};
         inst_ram[174]   = {DECREMENTAC, 18'd0};
         inst_ram[175]   = {STAC, 18'd0};

@@ -59,26 +59,18 @@ module Processor(
     wire [27:0] A_bus;
 
     // used in mdr
-    wire [27:0] mdr_out;    
+    wire [27:0] mdr_out;        
 
-    output wire [7:0] instruction_out;
-       
-
-    wire fetch,w_en,write_en,read_en,inc;
-    wire [7:0] instr_address;
-    
-    
-    wire [27:0] data_in;
-
+  
     // INSTRUCTION RAM
     Instruction_Ram IRAM(
         .clk(clk),      // input clk
-        .address(instruction_address)           // to be initialized [7:0] address
+        .address(instruction_address),           // to be initialized [7:0] address
         .instr_out(instruction_out_memory)      // to be initialized reg [25:0] instr_out
     );
 
 
-    //Control_Unit C1(clk,en,z_flag,instr_address,MBRU,control_signals,complete);
+    //Control_Unit 
     Control_Unit CU(
         .clk(clk),
         .en(en),

@@ -26,7 +26,7 @@ module B_Bus_Mux(
     input [27:0] AC,
     input [27:0] MAR,
     input [27:0] MDR,
-    input [8:0] PC,
+    input [7:0] PC,
     input [27:0] MBRU,
     input [27:0] R1,
     input [27:0] R2,

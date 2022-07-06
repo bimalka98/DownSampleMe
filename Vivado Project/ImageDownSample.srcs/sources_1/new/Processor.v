@@ -22,11 +22,7 @@
 
 module Processor(
     input en,
-    input clk,
-    input [7:0] DRam_in,
-    output [17:0] data_addr,
-    output [7:0]  DRam_out
-    
+    input clk,    
     );
 
     // used in Instruction_Ram
@@ -38,6 +34,11 @@ module Processor(
     wire [7:0] instruction_out_MBRU;
     wire [35:0] control_signals;
     
+    // used in MDR
+    wire [7:0] DRam_in;
+    wire  [17:0] data_addr;
+    wire  [7:0]  DRam_ou;
+
     // used in MBRU
     wire [27:0] mbru_out;
 

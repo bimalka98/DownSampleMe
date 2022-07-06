@@ -229,11 +229,11 @@ module Processor(
 
     Ram RAM(
         .clk(clk),
-        .w_en(control_signals[]),
-        .r_en(),
-        input [17:0] address,
-        input [7:0] data_in,         //maximum value is 256 (8 bits)
-        output reg [7:0] data_out
+        .w_en(control_signals[6]),
+        .r_en(control_signals[7]),
+        .address(data_addr),
+        .data_in(DRam_out), //maximum value is 256 (8 bits)
+        .data_out(DRam_in)
     );
 
 endmodule

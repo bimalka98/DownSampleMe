@@ -41,12 +41,17 @@ module Ram(                //for data
     end
     
     initial 
+
     begin
 
-        ram[1] = 
+        ram[3]  = 8'bx; // height_count
+        ram[4]  = 8'bx; // a: a local variable
+        ram[5]  = 8'bx; // b: a local variable
+        ram[6]  = 8'bx; // c: a local variable
+        ram[7]  = 8'bx; // width_count
 
 
-        // image data 
+        // image data: 8 bit single channel image
         ram[20] = 8'b10100101;
         ram[21] = 8'b10100001;
         ram[22] = 8'b10011101;

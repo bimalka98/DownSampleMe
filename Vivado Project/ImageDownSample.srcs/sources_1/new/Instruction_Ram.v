@@ -80,14 +80,18 @@ module Instruction_Ram(
     parameter JUMP          =   8'd71;
     parameter JMPZ          =   8'd73;
     parameter JMPNZ         =   8'd77;
+    parameter LDIR2         =   8'd81;
+    parameter LDIR3         =   8'd83;
+
+
     
     initial 
     begin
         inst_ram[0]     = {FETCH,   18'd0};
         inst_ram[1]     = {CLAC,    18'd0};
-        inst_ram[2]     = {LDX1R1,  18'd8};
-        inst_ram[3]     = {LDX2R2,  18'd1};
-        inst_ram[4]     = {LDX3R3,  18'd2};
+        inst_ram[2]     = {LDX1R1,  18'd20}; // start of original image
+        inst_ram[3]     = {LDIR2,  18'd256}; // image width as an immediate data
+        inst_ram[4]     = {LDIR3,  18'd256}; // image height as an immediate data
         inst_ram[5]     = {SWX5R3,  18'd3};
         inst_ram[6]     = {CLAC,    18'd0};
         inst_ram[7]     = {MOVACR4, 18'd0};
@@ -219,7 +223,7 @@ module Instruction_Ram(
         inst_ram[133]   = {DECREMENTAC, 18'd0};
         inst_ram[134]   = {STAC, 18'd0};
         inst_ram[135]   = {JMPNZ, 18'd77};
-        inst_ram[136]   = {LDX4R6, 18'd9};
+        inst_ram[136]   = {LDX4R6, 18'd70000}; // start of downsampled image
         inst_ram[137]   = {MOVR3AC, 18'd0};
         inst_ram[138]   = {RSHIFT1, 18'd0};
         inst_ram[139]   = {SWXXAC, 18'd3};

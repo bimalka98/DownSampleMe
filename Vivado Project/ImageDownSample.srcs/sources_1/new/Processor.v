@@ -205,7 +205,6 @@ module Processor(
         .inc(control_signals[5]),
         .data_in(C_bus),
         .instruction_address(instruction_address)  
-        // .PC_out(pc_out)
     );
 
     B_Bus_Mux MUX(
@@ -214,8 +213,7 @@ module Processor(
         .AC(A_bus),
         .MAR(mar_out),
         .MDR(mdr_out),
-        .PC(instruction_address), //.PC(pc_out)
-    //input [8:0] PC,??[7:0??]
+        .PC(instruction_address), 
         .MBRU(mbru_out),
         .R1(R1_bus),
         .R2(R2_bus),

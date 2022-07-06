@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../ModuleTester.srcs/sources_1/imports/new/ALU.v" \
+"../../../../ModuleTester.srcs/sources_1/imports/new/Accumilator.v" \
+"../../../../ModuleTester.srcs/sources_1/imports/new/B_Bus_Mux.v" \
+"../../../../ModuleTester.srcs/sources_1/imports/new/Control_Unit.v" \
+"../../../../ModuleTester.srcs/sources_1/imports/new/Instruction_Ram.v" \
+"../../../../ModuleTester.srcs/sources_1/imports/new/MAR.v" \
+"../../../../ModuleTester.srcs/sources_1/imports/new/MBRU.v" \
+"../../../../ModuleTester.srcs/sources_1/imports/new/MDR.v" \
+"../../../../ModuleTester.srcs/sources_1/imports/new/ProgamCounter.v" \
+"../../../../ModuleTester.srcs/sources_1/imports/new/Ram.v" \
+"../../../../ModuleTester.srcs/sources_1/imports/new/Register.v" \
+"../../../../ModuleTester.srcs/sources_1/imports/new/Processor.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

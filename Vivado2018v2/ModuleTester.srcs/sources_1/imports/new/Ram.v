@@ -35,6 +35,20 @@ module Ram#(
     // localparam ram_size=131072; //17 bits
     reg [(DATA_WIDTH-1):0] ram [0:2**ADDR_WITDH -1];
     reg [(DATA_WIDTH-1):0] read_data;
+       
+    always @(posedge clk)
+        begin
+            if (w_en==1)
+                ram[address]<=data_in;                  
+    end
+        
+    always @*
+        begin
+            if(r_en == 1)
+                read_data<= ram[address];        
+    end
+        
+    assign data_out = (r_en)? read_data: {DATA_WIDTH{1'bz}};
         
     initial 
     begin
@@ -65584,15 +65598,6 @@ module Ram#(
     end
         
     
-    always @(posedge clk)
-    begin
-        if (w_en==1)
-            ram[address]<=data_in;
-        else if(r_en == 1)
-            read_data<= ram[address];
-                  
-    end
     
-    assign data_out = (r_en)? read_data: {DATA_WIDTH{1'bz}};
     
 endmodule

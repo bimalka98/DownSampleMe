@@ -64,7 +64,9 @@ module Ram_tb(); // no sensitivity list for test benches
         for(mem_location = 20; mem_location <30; mem_location = mem_location + 1) begin
             address18b  <= mem_location; 
             #(10);
-        end 
+        end
+        
+        // memory write verification 
         
     end
 

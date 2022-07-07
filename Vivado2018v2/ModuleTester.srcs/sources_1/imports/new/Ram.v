@@ -20,37 +20,30 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Ram(                //for data
+module Ram#(
+  parameter DATA_WIDTH = 8, // maximum 255 
+  parameter ADDR_WITDH = 18
+)(                
     input clk,
     input w_en,
     input r_en,
-    input [17:0] address,
-    input [7:0] data_in,         //maximum value is 256 (8 bits)
-    output reg [7:0] data_out
-    );
-    parameter ram_size=131072; //17 bits
-    reg [7:0] ram [ram_size:0];
+    input  [(ADDR_WITDH-1):0] address,
+    input  [(DATA_WIDTH-1):0] data_in,         //maximum value is 256 (8 bits)
+    output [(DATA_WIDTH-1):0] data_out
+);
     
-    always @(posedge clk)
-    begin
-        if (w_en==1)
-            ram[address]<=data_in;
-        else if(r_en == 1)
-            data_out<= ram[address];
-          
-    end
-    
+    // localparam ram_size=131072; //17 bits
+    reg [(DATA_WIDTH-1):0] ram [0:2**ADDR_WITDH -1];
+    reg [(DATA_WIDTH-1):0] read_data;
+        
     initial 
-
     begin
-
         ram[3]  = 8'bx; // height_count
         ram[4]  = 8'bx; // a: a local variable
         ram[5]  = 8'bx; // b: a local variable
         ram[6]  = 8'bx; // c: a local variable
         ram[7]  = 8'bx; // width_count
-
-
+        
         // image data: 8 bit single channel image
         ram[20] = 8'b10100101;
         ram[21] = 8'b10100001;
@@ -65588,7 +65581,18 @@ module Ram(                //for data
         ram[65553] = 8'b01100110;
         ram[65554] = 8'b01101100;
         ram[65555] = 8'b01101110;
-
     end
-
+        
+    
+    always @(posedge clk)
+    begin
+        if (w_en==1)
+            ram[address]<=data_in;
+        else if(r_en == 1)
+            read_data<= ram[address];
+                  
+    end
+    
+    assign data_out = (r_en)? read_data: {DATA_WIDTH{1'bz}};
+    
 endmodule

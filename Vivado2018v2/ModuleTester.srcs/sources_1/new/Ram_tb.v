@@ -23,14 +23,16 @@
 module Ram_tb(); // no sensitivity list for test benches
 
     //constant declarations   
-    localparam T = 20;    // clock period in nano seconds
+    parameter T = 20;    // clock period in nano seconds
+    parameter DATA_WIDTH = 8; // maximum 255 
+    parameter ADDR_WITDH = 18;
 
     // signal declaration
     reg clock = 1'b0;
-    reg write_en = 1'b0, read_en = 1'b0;      // enable signal stimulus
-    reg [17:0] address18b = 18'd0;      // ram address stimulus
-    reg [7:0] data_ip = 8'b0000_0000;   // data input stimulus
-    wire [7:0] data_op = 8'b0000_0000;  // data output stimulus
+    reg write_en = 1'b0, read_en = 1'b1;      // enable signal stimulus
+    reg [(ADDR_WITDH-1):0]  address18b;      // ram address stimulus
+    reg [(DATA_WIDTH-1):0] data_ip = 8'b0000_0000;   // data input stimulus
+    wire [(DATA_WIDTH-1):0] data_op;  // data output stimulus
 
     // component instantiation: instantiate the device under test (DUT)
     Ram DUT(
@@ -57,14 +59,10 @@ module Ram_tb(); // no sensitivity list for test benches
     // Test Process
     integer mem_location;
     initial begin
-            
+        #(200);    
         // memory read Verification
         for(mem_location = 20; mem_location <30; mem_location = mem_location + 1) begin
-            
-            write_en    <= 0; 
-            read_en     <= 1; 
             address18b  <= mem_location; 
-            data_ip     <= 8'bx;
             #(10);
         end 
         

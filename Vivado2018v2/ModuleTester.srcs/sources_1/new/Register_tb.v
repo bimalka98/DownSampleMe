@@ -15,7 +15,7 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
+// Additional Comments: https://github.com/bimalka98/Hardware-Description-Languages/blob/master/HDLs/week_4.md#test-benchestest-fixture-or-test-harness-in-verilog
 // 
 //////////////////////////////////////////////////////////////////////////////////
 

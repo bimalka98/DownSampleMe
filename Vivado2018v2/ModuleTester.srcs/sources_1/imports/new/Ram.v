@@ -35,7 +35,7 @@ module Ram(                //for data
     begin
         if (w_en==1)
             ram[address]<=data_in;
-        else if(r_en)
+        else if(r_en == 1)
             data_out<= ram[address];
           
     end

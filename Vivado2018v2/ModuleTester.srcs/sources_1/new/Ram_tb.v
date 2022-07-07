@@ -59,14 +59,32 @@ module Ram_tb(); // no sensitivity list for test benches
     // Test Process
     integer mem_location;
     initial begin
-        #(200);    
+        #(20);    
         // memory read Verification
-        for(mem_location = 20; mem_location <30; mem_location = mem_location + 1) begin
+        for(mem_location = 20; mem_location <26; mem_location = mem_location + 1) begin
+            write_en <= 1'b0;
+            read_en <= 1'b1;
             address18b  <= mem_location; 
             #(10);
         end
         
-        // memory write verification 
+        // memory write verification
+        #(10)
+        for(mem_location = 20; mem_location <26; mem_location = mem_location + 1) begin
+             write_en <= 1'b1;
+             read_en <= 1'b0;
+             address18b  <= mem_location;
+             data_ip <= 8'b1111_1111;
+             #(10);
+        end 
+
+        #(10)
+        for(mem_location = 20; mem_location <26; mem_location = mem_location + 1) begin
+           write_en <= 1'b0;
+           read_en <= 1'b1;
+           address18b  <= mem_location; 
+           #(10);
+         end
         
     end
 

@@ -36,7 +36,7 @@ module Ram#(
     reg [(DATA_WIDTH-1):0] ram [0:2**ADDR_WITDH -1];
     reg [(DATA_WIDTH-1):0] read_data;
        
-    always @(posedge clk)
+    always @*
         begin
             if (w_en==1)
                 ram[address]<=data_in;                  
@@ -45,7 +45,7 @@ module Ram#(
     always @*
         begin
             if(r_en == 1)
-                read_data<= ram[address];        
+                read_data<= ram[address];   
     end
         
     assign data_out = (r_en)? read_data: {DATA_WIDTH{1'bz}};

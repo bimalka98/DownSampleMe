@@ -20,19 +20,24 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Register(
+module Register #(
+    parameter REG_WIDTH = 28
+)(
     input clk,
     input w_en,
-    input [27:0] data_in,
-    output reg [27:0] data_out
+    input  [(REG_WIDTH-1):0] data_in,
+    output [(REG_WIDTH-1):0] data_out
     );
 
+    reg [(REG_WIDTH-1):0] data_opt;
     
+    assign data_out = data_opt;
+
     //register set at posedge clk
     always @(posedge clk)
     begin
         if(w_en == 1)
-            data_out<=data_in;
+            data_opt<=data_in;
     end
         
 endmodule

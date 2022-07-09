@@ -101,7 +101,7 @@ module Processor(
     );
 
     MDR MDR(
-        .clk(clk_div),
+        .clk(clk),
         .w_en(control_signals[21]),
         .write_en(control_signals[6]),
         .read_en(control_signals[7]),

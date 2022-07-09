@@ -2,13 +2,33 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Jul  8 13:09:52 2022
-# Process ID: 16272
+# Start of session at: Fri Jul  8 18:44:46 2022
+# Process ID: 2820
 # Current directory: C:/Users/Ravindu Nagasinghe/Desktop/project_FINAL
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8640 C:\Users\Ravindu Nagasinghe\Desktop\project_FINAL\project_FINAL.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1840 C:\Users\Ravindu Nagasinghe\Desktop\project_FINAL\project_FINAL.xpr
 # Log file: C:/Users/Ravindu Nagasinghe/Desktop/project_FINAL/vivado.log
 # Journal file: C:/Users/Ravindu Nagasinghe/Desktop/project_FINAL\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Ravindu Nagasinghe/Desktop/project_FINAL/project_FINAL.xpr}
 update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config {C:/Users/Ravindu Nagasinghe/Desktop/project_1/Processor_behav.wcfg}
+source Processor.tcl
+add_force {/Processor/en} -radix hex {1 0ns}
+restart
+add_force {/Processor/en} -radix hex {1 0ns}
+add_force {/Processor/clk} -radix hex {1 0ns} {0 5000000ps} -repeat_every 10000000ps
+run all
+current_wave_config {Processor_behav.wcfg}
+add_wave {{/Processor/CU}} 
+relaunch_sim
+restart
+restart
+add_force {/Processor/en} -radix hex {1 0ns}
+add_force {/Processor/clk} -radix hex {1 0ns} {0 5000000ps} -repeat_every 10000000ps
+run all
+run all
+run all
+save_wave_config {C:/Users/Ravindu Nagasinghe/Desktop/project_1/Processor_behav.wcfg}
+close_sim

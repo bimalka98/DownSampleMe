@@ -179,7 +179,7 @@ module Control_Unit(
         control_store[86] = 36'b00000000_0_0111_00000000010000_000_00_0011; //  LDIR6 1
         control_store[87] = {36{1'bz}}; // DONE
         control_store[88] = 36'b00000000_0_0110_00000000000001_000_00_0000; //JMPNZN3 (Z = 0)
-            0
+            
     end
     
     

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Processor_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Processor" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="46465000000fs"></ZoomStartTime>
+      <ZoomEndTime time="48259000001fs"></ZoomEndTime>
+      <Cursor1Time time="47720000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="331"></NameColumnWidth>
+      <ValueColumnWidth column_width="264"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="54" />
+   <wave_markers>
+      <marker time="6512750000" label="" />
+      <marker time="6830250000" label="" />
+      <marker time="16120414000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/Processor/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/cd/clk_div" type="logic">
+      <obj_property name="ElementShortName">clk_div</obj_property>
+      <obj_property name="ObjectShortName">clk_div</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/z_flag" type="logic">
+      <obj_property name="ElementShortName">z_flag</obj_property>
+      <obj_property name="ObjectShortName">z_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/complete" type="logic">
+      <obj_property name="ElementShortName">complete</obj_property>
+      <obj_property name="ObjectShortName">complete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/PC/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[27:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/PC/inc" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">inc</obj_property>
+      <obj_property name="ObjectShortName">inc</obj_property>
+      <obj_property name="label">PC - inc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/PC/w_en" type="logic">
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/instruction_address" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">instruction_address[7:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction_address[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">instruction_address[7:0]  pointer for IRAM </obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/MBRU/fetch" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">fetch</obj_property>
+      <obj_property name="ObjectShortName">fetch</obj_property>
+      <obj_property name="label">instruction fetch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/instruction_out_memory" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">instruction_out_memory[25:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction_out_memory[25:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">instruction_out_memory[25:0] output from IRAM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/instruction_out_MBRU" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">instruction_out_MBRU[7:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction_out_MBRU[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">instruction_out_MBRU[7:0] u-instruction input for CU</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/control_signals" type="array">
+      <obj_property name="ElementShortName">control_signals[35:0]</obj_property>
+      <obj_property name="ObjectShortName">control_signals[35:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/data_addr" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data_addr[17:0]</obj_property>
+      <obj_property name="ObjectShortName">data_addr[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">data_addr[17:0] pointer for DRAM - MAR data_addr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/MDR/read_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">read_en</obj_property>
+      <obj_property name="ObjectShortName">read_en</obj_property>
+      <obj_property name="label">DRAM read_en    read enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/DRam_in" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">DRam_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DRam_in[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">DRam_in[7:0] data out from DRAM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/MDR/write_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">write_en</obj_property>
+      <obj_property name="ObjectShortName">write_en</obj_property>
+      <obj_property name="label">DRAM write_en    write enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/DRam_out" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">DRam_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DRam_out[7:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">DRam_out[7:0] data in from DRAM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/MBRU/fetch" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">fetch</obj_property>
+      <obj_property name="ObjectShortName">fetch</obj_property>
+      <obj_property name="label">MBRU w_en - fetch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/mbru_out" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">mbru_out[27:0]</obj_property>
+      <obj_property name="ObjectShortName">mbru_out[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">mbru_out[27:0]   MBRU output to B BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/control_signals[22]" type="logic">
+      <obj_property name="ElementShortName">[22]</obj_property>
+      <obj_property name="ObjectShortName">[22]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/MAR/w_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+      <obj_property name="label">MAR w_en - w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/mar_out" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">mar_out[27:0]</obj_property>
+      <obj_property name="ObjectShortName">mar_out[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">mar_out[27:0]  MAR output to B BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/ALU/sel" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">sel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[3:0]</obj_property>
+      <obj_property name="label">ALU sel[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/ALU/state" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+      <obj_property name="label">ALU state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/C_bus" type="array">
+      <obj_property name="ElementShortName">C_bus[27:0]</obj_property>
+      <obj_property name="ObjectShortName">C_bus[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/A_bus" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">A_bus[27:0]</obj_property>
+      <obj_property name="ObjectShortName">A_bus[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">A_bus[27:0]  AC output to A BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/B_bus" type="array">
+      <obj_property name="ElementShortName">B_bus[27:0]</obj_property>
+      <obj_property name="ObjectShortName">B_bus[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R9_bus" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">R9_bus[27:0]</obj_property>
+      <obj_property name="ObjectShortName">R9_bus[27:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">R9_bus[27:0]  R9 output to B BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/MDR/w_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+      <obj_property name="label">mdr w_en - w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/MDR/write_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">write_en</obj_property>
+      <obj_property name="ObjectShortName">write_en</obj_property>
+      <obj_property name="label">mdr DRAM write - write_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/MDR/read_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">read_en</obj_property>
+      <obj_property name="ObjectShortName">read_en</obj_property>
+      <obj_property name="label">mdr DRAM out - read_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/mdr_out" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">mdr_out[27:0]</obj_property>
+      <obj_property name="ObjectShortName">mdr_out[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">mdr_out[27:0]  MDR output to B BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/MDR/DRam_out" type="array">
+      <obj_property name="ElementShortName">DRam_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DRam_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R1/w_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+      <obj_property name="label">R1 - w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R1_bus" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">R1_bus[27:0]</obj_property>
+      <obj_property name="ObjectShortName">R1_bus[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">R1_bus[27:0] R1 output to B BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R2/w_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+      <obj_property name="label">R2 - w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R2_bus" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">R2_bus[27:0]</obj_property>
+      <obj_property name="ObjectShortName">R2_bus[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">R2_bus[27:0]  R2 output to B BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R3/w_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+      <obj_property name="label">R3 - w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R3_bus" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">R3_bus[27:0]</obj_property>
+      <obj_property name="ObjectShortName">R3_bus[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">R3_bus[27:0]  R3 output to B BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R4/w_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+      <obj_property name="label">R4 - w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R4_bus" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">R4_bus[27:0]</obj_property>
+      <obj_property name="ObjectShortName">R4_bus[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">R4_bus[27:0]  R4 output to B BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R5/w_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+      <obj_property name="label">R5 - w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R5_bus" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">R5_bus[27:0]</obj_property>
+      <obj_property name="ObjectShortName">R5_bus[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">R5_bus[27:0]  R5 output to B BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R6/w_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+      <obj_property name="label">R6 - w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R6_bus" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">R6_bus[27:0]</obj_property>
+      <obj_property name="ObjectShortName">R6_bus[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">R6_bus[27:0]  R6 output to B BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R7/w_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+      <obj_property name="label">R7 - w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R7_bus" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">R7_bus[27:0]</obj_property>
+      <obj_property name="ObjectShortName">R7_bus[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">R7_bus[27:0]  R7 output to B BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R8/w_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+      <obj_property name="label">R8 - w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R8_bus" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">R8_bus[27:0]</obj_property>
+      <obj_property name="ObjectShortName">R8_bus[27:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="label">R8_bus[27:0]  R8 output to B BUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/R9/w_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+      <obj_property name="label">R9 - w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/ACC/w_en" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_en</obj_property>
+      <obj_property name="ObjectShortName">w_en</obj_property>
+      <obj_property name="label">AC - w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/ACC/inc" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">inc</obj_property>
+      <obj_property name="ObjectShortName">inc</obj_property>
+      <obj_property name="label">AC - inc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor/clk_div" type="logic">
+      <obj_property name="ElementShortName">clk_div</obj_property>
+      <obj_property name="ObjectShortName">clk_div</obj_property>
+   </wvobject>
+</wave_config>

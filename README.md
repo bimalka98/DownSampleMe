@@ -1,5 +1,14 @@
-# Image-Downsampler
-Custom processor implemented on an FPGA for image downsampling for UOM's EN3030 Circuits and Systems Design module.
+# DownSampleMe© - An FPGA based Image Down Sampler 
+A Custom processor implemented on an FPGA for image downsampling for UOM's EN3030 Circuits and Systems Design module.
+
+###  Group members
+
+|Name|Index|
+|:----|:---|
+|Kumarasinghe H.A.N.H | 180337M|
+|Mendis N.P.A. | 180398A|
+|Nagasinghe K.R.Y. | 180411K|
+|Thalagala B.P. |180631J|
 
 ## Micro Instructions
 

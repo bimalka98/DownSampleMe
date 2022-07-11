@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Processor.srcs/sources_1/imports/new/ALU1.v" \
+"../../../../Processor.srcs/sources_1/new/Accumilator.v" \
+"../../../../Processor.srcs/sources_1/new/B_Bus_Mux.v" \
+"../../../../Processor.srcs/sources_1/new/Control_Unit.v" \
+"../../../../Processor.srcs/sources_1/new/Instruction_Ram.v" \
+"../../../../Processor.srcs/sources_1/new/MAR.v" \
+"../../../../Processor.srcs/sources_1/new/MBRU.v" \
+"../../../../Processor.srcs/sources_1/new/MDR.v" \
+"../../../../Processor.srcs/sources_1/new/Processor.v" \
+"../../../../Processor.srcs/sources_1/new/ProgamCounter.v" \
+"../../../../Processor.srcs/sources_1/new/Ram.v" \
+"../../../../Processor.srcs/sources_1/new/Register.v" \
+"../../../../Processor.srcs/sources_1/imports/Desktop/clk_divider.v" \
+"../../../../Processor.srcs/sources_1/new/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

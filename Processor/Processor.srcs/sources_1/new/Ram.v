@@ -64,7 +64,8 @@ module Ram#(
               $fwrite(f,"%b\n",ram[index] ); //NOT DRAM < DMEM
               
           end
-          if(index == 74095)
+//          if(index == 74095)
+          if(index == 12)
               begin
                 $fclose(f);
                 $finish;
@@ -75,13 +76,19 @@ module Ram#(
         
         // creating a file handler to save the downsampled image
         f = $fopen("E:\\DownSampleMe\\output.txt","w"); 
-        index = 70000;              //start index
+        
+        index = 10;     //start index
+        ram[10] = 8'd6; // value 1
+        ram[11] = 8'd9; // value 2
+        
+//        index = 70000;              //start index
+        
         ram[3]  = 8'bx; // height_count
         ram[4]  = 8'bx; // a: a local variable
         ram[5]  = 8'bx; // b: a local variable
         ram[6]  = 8'bx; // c: a local variable
         ram[7]  = 8'bx; // width_count
-        
+                
         // image data: 8 bit single channel image
         ram[20] = 8'b10000100;
         ram[21] = 8'b10000100;

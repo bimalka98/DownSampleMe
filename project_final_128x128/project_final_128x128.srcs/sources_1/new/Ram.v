@@ -39,8 +39,8 @@ module Ram#(
     reg [17:0] index;
     reg [17:0] index_conv;
     integer f;
-    integer g;
-       
+      
+    // operations of the ram. read and write 
     always @(posedge clk)
         begin
             if (w_en==1)
@@ -55,7 +55,7 @@ module Ram#(
         
     assign data_out = read_data; 
     
-
+    // simulation purposes only: to save the downsampled image to a txt file for post procesing
     always@(posedge clk)
         begin
           if ( done  == 1 )
@@ -64,17 +64,21 @@ module Ram#(
               $fwrite(f,"%b\n",ram[index] ); //NOT DRAM < DMEM
               
           end
-          if(index == 74095)
+          if(index == 74095) // final address of 128x128 image starting at 70000 ram loaction
               begin
                 $fclose(f);
                 $finish;
               end
         end
+    
     initial 
     begin
-        //E:\Work\ENTC\5 CSD\outputs
-        f = $fopen("F:\\output.txt","w"); 
-        index = 70000;              //start index
+        
+        // creating a file handler to write downsampled image
+        f = $fopen("E:\\DownSampleMe\\output.txt","w"); 
+        index   = 70000;//start index of the down sampled image
+        
+        // to save variables related to the image to be down sampled
         ram[3]  = 8'bx; // height_count
         ram[4]  = 8'bx; // a: a local variable
         ram[5]  = 8'bx; // b: a local variable

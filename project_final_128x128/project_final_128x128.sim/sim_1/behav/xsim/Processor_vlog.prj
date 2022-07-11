@@ -1,0 +1,21 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_final_128x128.srcs/sources_1/imports/new/ALU1.v" \
+"../../../../project_final_128x128.srcs/sources_1/new/Accumilator.v" \
+"../../../../project_final_128x128.srcs/sources_1/new/B_Bus_Mux.v" \
+"../../../../project_final_128x128.srcs/sources_1/new/Control_Unit.v" \
+"../../../../project_final_128x128.srcs/sources_1/new/Instruction_Ram.v" \
+"../../../../project_final_128x128.srcs/sources_1/new/MAR.v" \
+"../../../../project_final_128x128.srcs/sources_1/new/MBRU.v" \
+"../../../../project_final_128x128.srcs/sources_1/new/MDR.v" \
+"../../../../project_final_128x128.srcs/sources_1/new/ProgamCounter.v" \
+"../../../../project_final_128x128.srcs/sources_1/new/Ram.v" \
+"../../../../project_final_128x128.srcs/sources_1/new/Register.v" \
+"../../../../project_final_128x128.srcs/sources_1/imports/Desktop/clk_divider.v" \
+"../../../../project_final_128x128.srcs/sources_1/new/Processor.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

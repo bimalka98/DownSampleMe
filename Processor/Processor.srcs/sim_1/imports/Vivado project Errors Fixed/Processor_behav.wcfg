@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1757196070fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomStartTime time="322568896582227fs"></ZoomStartTime>
+      <ZoomEndTime time="322574414683555fs"></ZoomEndTime>
+      <Cursor1Time time="322573495000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="331"></NameColumnWidth>
-      <ValueColumnWidth column_width="244"></ValueColumnWidth>
+      <ValueColumnWidth column_width="240"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="28" />
    <wave_markers>
@@ -40,6 +40,7 @@
    <wvobject fp_name="/top_tb/Processor_DUT/instruction_address" type="array">
       <obj_property name="ElementShortName">instruction_address[7:0]</obj_property>
       <obj_property name="ObjectShortName">instruction_address[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/top_tb/Processor_DUT/instruction_out_memory" type="array">
       <obj_property name="ElementShortName">instruction_out_memory[25:0]</obj_property>
@@ -64,6 +65,7 @@
    <wvobject fp_name="/top_tb/Processor_DUT/DRam_in" type="array">
       <obj_property name="ElementShortName">DRam_in[7:0]</obj_property>
       <obj_property name="ObjectShortName">DRam_in[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/top_tb/Processor_DUT/data_addr" type="array">
       <obj_property name="ElementShortName">data_addr[17:0]</obj_property>

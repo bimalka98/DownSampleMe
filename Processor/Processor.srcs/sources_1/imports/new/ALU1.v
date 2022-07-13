@@ -96,7 +96,7 @@ module ALU2(
                 LSHIFT1:
                     out<=A<<1;
                 LSHIFT8:    ///Depends on the image size
-                    out<=A<<7;   
+                    out<=A<<8;   
                 RSHIFT1:
                     out<=A>>1;
                 RESET:

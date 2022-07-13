@@ -93,8 +93,8 @@ module Instruction_Ram(
         inst_ram[0]     = {FETCH,   18'd0};
         inst_ram[1]     = {CLAC,    18'd0};
         inst_ram[2]     = {LDIR1,  18'd20}; // start of original image
-        inst_ram[3]     = {LDIR2,  18'd128}; // image width as an immediate data
-        inst_ram[4]     = {LDIR3,  18'd128}; // image height as an immediate data
+        inst_ram[3]     = {LDIR2,  18'd256}; // image width as an immediate data
+        inst_ram[4]     = {LDIR3,  18'd256}; // image height as an immediate data
         inst_ram[5]     = {SWX5R3,  18'd3};
         inst_ram[6]     = {CLAC,    18'd0};
         inst_ram[7]     = {MOVACR4, 18'd0};

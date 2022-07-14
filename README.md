@@ -33,12 +33,12 @@ The primary objective of this project was to design a Microprocessor and a CPU (
 ### Run the simulation with the pre configured settings (default image)
 
 1. `Processor` directory includes the latest working version of the processor which was tested and run successfully in `Xilinx Vivado 2018.2`. The design is therefore not tested on any of the previos versions of the software.
-2. To simulate the processor, open Vivado software. The use its `Open Project` wizard to open the `Processor.xpr` file locatd in the `Processor` directory.
-3. Once the project is loaded, run the simulation. If the simulation is successful you will see a waveform similar to that of the below figure with the `complete 1`. signal `HIGH`.
+2. To simulate the processor, open Vivado software. Then use its `Open Project` wizard to open the `Processor.xpr` file locatd in the `Processor` directory.
+3. Once the project is loaded, run the simulation. If the simulation is successful you will see a waveform similar to that of the below figure with the `complete1`. signal `HIGH`.
 
 <div align="center">
   <a href="https://github.com/bimalka98/DownSampleMe">
-    <img src="images/waveform/end.png" alt="Logo" width="800" >
+    <img src="images/waveform/end.png" alt="Logo" width="700" >
   </a>
 </div>
 
@@ -47,7 +47,7 @@ The primary objective of this project was to design a Microprocessor and a CPU (
 
 <div align="center">
   <a href="https://github.com/bimalka98/DownSampleMe">
-    <img src="images/colab/viz_output.jpeg" alt="Logo" width="800" >
+    <img src="images/colab/viz_output.jpeg" alt="Logo" width="700" >
   </a>
 </div>
 
@@ -57,7 +57,7 @@ The primary objective of this project was to design a Microprocessor and a CPU (
 
 <div align="center">
   <a href="https://github.com/bimalka98/DownSampleMe">
-    <img src="images/colab/open_image.jpeg" alt="Logo" width="800" >
+    <img src="images/colab/open_image.jpeg" alt="Logo" width="700" >
   </a>
 </div>
 
@@ -65,7 +65,7 @@ The primary objective of this project was to design a Microprocessor and a CPU (
 
 <div align="center">
   <a href="https://github.com/bimalka98/DownSampleMe">
-    <img src="images/colab/get_binaries.jpeg" alt="Logo" width="800" >
+    <img src="images/colab/get_binaries.jpeg" alt="Logo" width="700" >
   </a>
 </div>
 

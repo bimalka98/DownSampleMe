@@ -91,11 +91,15 @@ ram[65555] = 8'b01101110;
 
 ## Resources
 
-* **Assembly Code of the downsampling algorithm**: [Google Doc](https://docs.google.com/document/d/1R5cfxfUcxFAjJ8fZj0wsmnxjtsEuOZJe5kcvPTRPmB8/edit?usp=sharing)
+* **Documentation**: [Google Doc](https://docs.google.com/document/d/1XCWUJ5JvQ-9f8b33Wkm8cP1w8nkovFviKMQTcKhzpn4/edit?usp=sharing), offline available in the directory `Report/FPGA report .pdf`
 
-* **Look Up Table for the Control Unit**: [Google Sheet](https://docs.google.com/spreadsheets/d/1cPLsKdqjS8sBTy0h7B8eG3x53jNWrn1y6RE4xuYMAvU/edit?usp=sharing)
+* **Assembly Code of the downsampling algorithm**: [Google Doc](https://docs.google.com/document/d/1R5cfxfUcxFAjJ8fZj0wsmnxjtsEuOZJe5kcvPTRPmB8/edit?usp=sharing), offline available in the directory `Micro Instructions/Assembly Code of the Algorithm.pdf`
 
-* **Python Scripts**: [Google Colab Notebook](https://colab.research.google.com/drive/1eE8Q8uIJxuyx-AW62uAcI1w39IIY_8qK?usp=sharing)
+* **Look Up Table for the Control Unit**: [Google Sheet](https://docs.google.com/spreadsheets/d/1cPLsKdqjS8sBTy0h7B8eG3x53jNWrn1y6RE4xuYMAvU/edit?usp=sharing), offline available in the directory `Control LUT/Control Unit LUT - Sheet1.pdf`
+
+* **Python Scripts**: [Google Colab Notebook](https://colab.research.google.com/drive/1eE8Q8uIJxuyx-AW62uAcI1w39IIY_8qK?usp=sharing), offline available in the directory `Image Generation/EN3030_Processor_Design.ipynb`
+
+
 
 ##  Contributors
 
